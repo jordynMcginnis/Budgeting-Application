@@ -1,5 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
+import Balance from './components/Balance';
+import Actions from './components/Actions';
+import SpendingInsights from './components/SpendingInsights';
+import ExpenseChart from './components/ExpenseChart';
+import TopCategories from './components/TopCategories';
 
 class App extends Component {
   render() {
