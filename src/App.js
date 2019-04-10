@@ -48,10 +48,9 @@ function App () {
       })
     }
   }
-  function addBudget(budget) {
+  function submitBudget(budget) {
     updateBudget(budget)
-    .then((res) => {
-      console.log(res)
+    .then(() => {
       fetchBudget();
     })
   }
@@ -66,7 +65,7 @@ function App () {
       <Actions
         addExpense={submitExpense}
         expenses={expenses}
-        addBudget={updateBudget}
+        addBudget={submitBudget}
         removeExpenses={removeExpenses}
       />
       <ExpenseChart expenses={expenses}/>
