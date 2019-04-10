@@ -10,6 +10,14 @@ function Actions(props) {
   const [budget, setBudget] = useState(null);
   const alert = useAlert();
 
+  function correctCategory () {
+    if(category !== null) {
+      return true;
+    } else {
+      alert.show('Select a category');
+      return false;
+    }
+  }
   return (
 
   )
