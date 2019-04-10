@@ -52,6 +52,9 @@ function Actions(props) {
       resetBudget();
     }
   }
+  function addValue(func, value) {
+    func(parseInt((value).slice(1)));
+  }
   return (
 
   )
