@@ -168,3 +168,43 @@ body {
 .top-categories span {
   display: flex;
 }
+
+@media screen and (max-width: 970px) {
+  body {
+    margin: 0;
+  }
+  .app {
+    margin: 0 auto;
+    background-color: red;
+  }
+  .spendingInsights {
+    height: auto;
+    width: 100%;
+  }
+  .balance h1 {
+    text-align: center;
+    height: auto;
+  }
+  .balance {
+    margin-bottom: 5px;
+    width: 100%;
+  }
+  .balance h3 {
+    width: 150px;
+  }
+  .actions {
+    width: 100%;
+  }
+  .actions input {
+     border-width: 5px;
+  }
+  .expenseChart {
+    top: 5px;
+    width: 100%;
+    margin-left: auto;
+  }
+  .top-categories {
+    width: 100%;
+    top: 10px;
+  }
+}
