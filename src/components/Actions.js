@@ -18,6 +18,14 @@ function Actions(props) {
       return false;
     }
   }
+  function correctPrice () {
+    if(isNaN(price) === false && price !== null) {
+      return true;
+    } else {
+      alert.show('add expense cost');
+      return false;
+    }
+  }
   return (
 
   )
