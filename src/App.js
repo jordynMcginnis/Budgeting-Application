@@ -5,7 +5,7 @@ import SpendingInsights from './components/SpendingInsights';
 import ExpenseChart from './components/ExpenseChart';
 import TopCategories from './components/TopCategories';
 import { useAlert } from 'react-alert';
-import { getExpenses, addExpense, deleteExpenses } from './api/index.js';
+import { getExpenses, addExpense, deleteExpenses, getBudget, updateBudget } from './api/index.js';
 
 function App () {
   const [expenses, setExpenses] = useState([]);
@@ -13,13 +13,20 @@ function App () {
   const alert = useAlert();
 
   useEffect(() => {
-    fetchExpenses()
+    fetchExpenses();
+    fetchBudget();
   },[])
 
   function fetchExpenses() {
     getExpenses()
     .then((expenses) => {
       setExpenses(expenses.data);
+    })
+  }
+  function fetchBudget() {
+    getBudget()
+    .then((budget) => {
+      setBudget(budget.data[0].budget);
     })
   }
   function submitExpense(expense) {
@@ -30,10 +37,23 @@ function App () {
     })
   }
   function removeExpenses() {
+    const lastExpense = expenses[expenses.length - 1].id
     for(var i = 0; i < expenses.length; i++){
       deleteExpenses(expenses[i].id)
+      .then((deletedId) => {
+        if(deletedId === lastExpense){
+          console.log(true);
+          fetchExpenses();
+        }
+      })
     }
-    fetchExpenses();
+  }
+  function addBudget(budget) {
+    updateBudget(budget)
+    .then((res) => {
+      console.log(res)
+      fetchBudget();
+    })
   }
 
   return (
@@ -46,7 +66,7 @@ function App () {
       <Actions
         addExpense={submitExpense}
         expenses={expenses}
-        addBudget={budget => {setBudget(budget)}}
+        addBudget={updateBudget}
         removeExpenses={removeExpenses}
       />
       <ExpenseChart expenses={expenses}/>
