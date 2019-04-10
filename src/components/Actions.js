@@ -40,6 +40,12 @@ function Actions(props) {
   function resetBudget () {
     setBudget(null);
   }
+  function addExpense() {
+    if (correctCategory() && correctPrice()) {
+      props.addExpense({category: category, price: price})
+      resetPrice();
+    }
+  }
   return (
 
   )
