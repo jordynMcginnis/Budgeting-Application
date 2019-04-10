@@ -7,7 +7,7 @@ import TopCategories from './components/TopCategories';
 import { useAlert } from 'react-alert';
 import { getExpenses, addExpense, deleteExpenses } from './api/index.js';
 
-class App extends Component {
+function App () {
   const [expenses, setExpenses] = useState([]);
   const [budget, setBudget] = useState(0);
   const alert = useAlert();
@@ -15,6 +15,7 @@ class App extends Component {
   useEffect(() => {
     fetchExpenses()
   },[])
+
   function fetchExpenses() {
     getExpenses()
     .then((expenses) => {
@@ -34,25 +35,24 @@ class App extends Component {
       alert.show('all expenses deleted')
     })
   }
-  render() {
-    return (
-      <div className="App">
-        <SpendingInsights expenses={expenses}/>
-        <Balance
-          expenses={expenses}
-          budget={budget}
-        />
-        <Actions
-          addExpense={submitExpense}
-          expenses={expenses}
-          addBudget={budget => {setBudget(budget)}}
-          removeExpenses={removeExpenses}
-        />
-        <ExpenseChart expenses={expenses}/>
-        <TopCategories expenses={expenses}/>
-      </div>
-    );
-  }
+
+  return (
+    <div className="App">
+      <SpendingInsights expenses={expenses}/>
+      <Balance
+        expenses={expenses}
+        budget={budget}
+      />
+      <Actions
+        addExpense={submitExpense}
+        expenses={expenses}
+        addBudget={budget => {setBudget(budget)}}
+        removeExpenses={removeExpenses}
+      />
+      <ExpenseChart expenses={expenses}/>
+      <TopCategories expenses={expenses}/>
+    </div>
+  );
 }
 
 export default App;

@@ -36,6 +36,7 @@ defmodule ServerWeb.Endpoint do
     key: "_server_key",
     signing_salt: "4Xb54p8t"
 
+  plug CORSPlug
   plug ServerWeb.Router
 
   @doc """

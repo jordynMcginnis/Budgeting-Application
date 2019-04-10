@@ -1,7 +1,7 @@
 defmodule Server.Mixfile do
   use Mix.Project
 
-  def project do
+ def project do
     [
       app: :server,
       version: "0.0.1",
@@ -38,7 +38,8 @@ defmodule Server.Mixfile do
       {:phoenix_ecto, "~> 3.2"},
       {:postgrex, ">= 0.0.0"},
       {:gettext, "~> 0.11"},
-      {:cowboy, "~> 1.0"}
+      {:plug_cowboy, "~> 1.0"},
+      {:cors_plug, "~> 2.0"},
     ]
   end
 
@@ -56,3 +57,4 @@ defmodule Server.Mixfile do
     ]
   end
 end
+

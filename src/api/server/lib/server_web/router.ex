@@ -7,5 +7,9 @@ defmodule ServerWeb.Router do
 
   scope "/api", ServerWeb do
     pipe_through :api
+
+    get "/show_posts", ExpenseController, :index
+    post "/add_expense", ExpenseController, :create
+    delete "/delete_expenses", ExpenseController, :delete
   end
 end
