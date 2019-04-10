@@ -56,6 +56,47 @@ function Actions(props) {
     func(parseInt((value).slice(1)));
   }
   return (
-
+    <div className='actions'>
+      <h3>Add Expense</h3>
+      <RadioGroup
+        className='radio-group'
+        children='radio-b'
+        onChange={(e) => {setCategory(e)}}
+        defaultValue='Rent'
+      >
+        <RadioButton pointColor='#38cbc6'value="Grocery">
+          Grocery
+        </RadioButton>
+        <RadioButton pointColor='#38cbc6' value="Rent" >
+          Rent
+        </RadioButton>
+        <RadioButton pointColor='#38cbc6' value="Utility Bills">
+          Utility Bills
+        </RadioButton>
+        <RadioButton pointColor='#38cbc6' value="Eating Out">
+          Eating Out
+        </RadioButton>
+        <RadioButton pointColor='#38cbc6' value="Clothing">
+          Clothing
+        </RadioButton>
+        <RadioButton pointColor='#38cbc6' value="Social">
+          Social
+        </RadioButton>
+      </RadioGroup>
+      <NumberFormat
+        prefix={'$'}
+        value={price}
+        onChange={({target}) => {addValue(setPrice, target.value)}}
+      />
+      <button onClick={addExpense}>Submit</button>
+      <h3>Update Budget</h3>
+      <NumberFormat
+        prefix={'$'}
+        value={budget}
+        onChange={({target}) => {addValue(setBudget, target.value)}}
+      />
+      <button onClick={addBudget}>Submit</button>
+      <button onClick={props.removeExpenses}>Delete All Expenses</button>
+    </div>
   )
 }
