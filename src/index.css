@@ -164,3 +164,7 @@ body {
   font-size: 21px;
   color: #63c6c4;
 }
+
+.top-categories span {
+  display: flex;
+}
