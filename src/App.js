@@ -5,6 +5,7 @@ import Actions from './components/Actions';
 import SpendingInsights from './components/SpendingInsights';
 import ExpenseChart from './components/ExpenseChart';
 import TopCategories from './components/TopCategories';
+import { useAlert } from 'react-alert';
 
 class App extends Component {
   render() {
