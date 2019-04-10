@@ -100,3 +100,5 @@ function Actions(props) {
     </div>
   )
 }
+
+export default Actions;
