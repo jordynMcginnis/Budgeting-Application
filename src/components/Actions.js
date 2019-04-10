@@ -34,6 +34,12 @@ function Actions(props) {
       return false;
     }
   }
+  function resetPrice () {
+    setPrice(null);
+  }
+  function resetBudget () {
+    setBudget(null);
+  }
   return (
 
   )
