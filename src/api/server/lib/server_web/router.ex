@@ -10,6 +10,6 @@ defmodule ServerWeb.Router do
 
     get "/show_posts", ExpenseController, :index
     post "/add_expense", ExpenseController, :create
-    delete "/delete_expenses", ExpenseController, :delete
+    delete "/delete_expenses/:id", ExpenseController, :delete
   end
 end
