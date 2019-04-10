@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import { FaDollarSign } from "react-icons/fa";
 import { useAlert } from 'react-alert';
-import { getBalance } from '../api/index.js';
 
 function Balance(props) {
   const budgetSpent = props.expenses.reduce((amount, expense) => {
