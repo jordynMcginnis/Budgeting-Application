@@ -16,11 +16,17 @@ class App extends Component {
   useEffect(() => {
     fetchExpenses()
   },[])
-
   function fetchExpenses() {
     getExpenses()
     .then((expenses) => {
       setExpenses(expenses.data);
+    })
+  }
+  function submitExpense(expense) {
+    addExpense(expense)
+    .then((expenses) => {
+      fetchExpenses();
+      alert.show('Expense added')
     })
   }
   render() {
