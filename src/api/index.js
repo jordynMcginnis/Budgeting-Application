@@ -8,8 +8,19 @@ const axiosParams = {
 };
 
 module.exports = {
-  getBalances: () => {
-    return axios.get('http://localhost:8085/yo', axiosParams)
+  getExpenses: () => {
+    return axios.get('http://localhost:4000/api/show_posts', axiosParams)
+      .then(function (response) {
+        return response.data;
+      })
+      .catch(function (error) {
+        console.log(error)
+        return error;
+      })
+  },
+  addExpense: (body) => {
+    const data = {expense: body};
+    return axios.post('http://localhost:4000/api/add_expense', data, axiosParams)
       .then(function (response) {
         return response;
       })
@@ -17,5 +28,4 @@ module.exports = {
         console.log(error);
       })
   },
-
 };
