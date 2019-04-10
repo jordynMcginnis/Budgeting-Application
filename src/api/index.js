@@ -28,11 +28,10 @@ module.exports = {
         console.log(error);
       })
   },
-  deleteExpenses: () => {
-    const data = {id: 7};
-    return axios.delete('http://localhost:4000/api/delete_expenses',data,axiosParams)
+  deleteExpenses: (id) => {
+    return axios.delete(`http://localhost:4000/api/delete_expenses/${id}`,axiosParams)
       .then(function (response) {
-        return response.data;
+        return response
       })
       .catch(function (error) {
         console.log(error)
