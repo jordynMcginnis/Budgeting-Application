@@ -26,6 +26,14 @@ function Actions(props) {
       return false;
     }
   }
+  function correctBudget () {
+    if(isNaN(budget) === false && budget !== null) {
+      return true;
+    } else {
+      alert.show('add a correct budget');
+      return false;
+    }
+  }
   return (
 
   )
