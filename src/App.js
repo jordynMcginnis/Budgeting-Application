@@ -8,6 +8,9 @@ import TopCategories from './components/TopCategories';
 import { useAlert } from 'react-alert';
 
 class App extends Component {
+  const [expenses, setExpenses] = useState([]);
+  const [budget, setBudget] = useState(0);
+  const alert = useAlert();
   render() {
     return (
       <div className="App">
