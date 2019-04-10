@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import './App.css';
 import Balance from './components/Balance';
 import Actions from './components/Actions';
 import SpendingInsights from './components/SpendingInsights';
