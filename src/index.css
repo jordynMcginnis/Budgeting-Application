@@ -135,3 +135,32 @@ body {
   align-items: center;
   justify-content: center;
 }
+
+.top-categories {
+  width: 25%;
+  height: 20%;
+  background-color: white;
+  position: relative;
+  top: -25%;
+  text-align: center;
+  min-height: 200px;
+}
+
+.top-categories ul {
+  padding: 0px;
+  margin: 0px;
+}
+
+.top-categories li {
+  font-weight: bold;
+  display: flex;
+  justify-content: space-around;
+  margin: 10px;
+  margin-top: 20px;
+}
+
+.top-icon {
+  padding-right: 5px;
+  font-size: 21px;
+  color: #63c6c4;
+}
