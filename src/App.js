@@ -29,6 +29,12 @@ class App extends Component {
       alert.show('Expense added')
     })
   }
+  function removeExpenses() {
+    deleteExpenses()
+    .then(() => {
+      alert.show('all expenses deleted')
+    })
+  }
   render() {
     return (
       <div className="App">
