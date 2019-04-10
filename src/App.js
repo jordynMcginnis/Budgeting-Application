@@ -30,10 +30,10 @@ function App () {
     })
   }
   function removeExpenses() {
-    deleteExpenses()
-    .then(() => {
-      alert.show('all expenses deleted')
-    })
+    for(var i = 0; i < expenses.length; i++){
+      deleteExpenses(expenses[i].id)
+    }
+    fetchExpenses();
   }
 
   return (
