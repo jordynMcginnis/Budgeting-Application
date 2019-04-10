@@ -46,6 +46,12 @@ function Actions(props) {
       resetPrice();
     }
   }
+  function addBudget() {
+    if(correctBudget()) {
+      props.addBudget(budget)
+      resetBudget();
+    }
+  }
   return (
 
   )
