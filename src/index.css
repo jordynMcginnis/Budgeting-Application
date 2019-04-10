@@ -44,3 +44,94 @@ body {
   font-size: 14px;
   padding-left: 10px;
 }
+
+.actions {
+  width: 25%;
+  height: 50%;
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 5px;
+}
+
+.actions h3 {
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+}
+
+.actions button {
+  width: 25%;
+  height: 8%;
+  background-color: white;
+  border-color: #63c6c4;
+  border-width: 2px;
+  border-radius: 5px;
+}
+
+.actions input {
+  width: 65%;
+  height: 8%;
+}
+.radio-group {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.spending-insights {
+  width: 15%;
+  height:80%;
+  background-color: white;
+}
+
+.spending-insights h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.spending-insights ul {
+  padding: 0px;
+  margin: 0px;
+}
+
+.spending-insights li {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+}
+
+.spending-insights span {
+  display: flex;
+}
+
+.fa-icon {
+  padding-right: 10px;
+  font-size: 20px;
+  color: #63c6c4;
+}
+
+.expenseChart {
+  background-color: white;
+  width: 50%;
+  height: 60%;
+  position: relative;
+  top: -50%;
+  margin-left: 18%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.expenseChart h3 {
+  width: 100%;
+  height: 25%;
+  padding: 0px;
+  margin: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
