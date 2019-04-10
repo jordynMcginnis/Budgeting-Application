@@ -5,6 +5,11 @@ import { submitExpense, updateBudget } from '../api/index.js';
 import { useAlert } from 'react-alert';
 
 function Actions(props) {
+  const [category, setCategory] = useState(null);
+  const [price, setPrice] = useState(null);
+  const [budget, setBudget] = useState(null);
+  const alert = useAlert();
+
   return (
 
   )
