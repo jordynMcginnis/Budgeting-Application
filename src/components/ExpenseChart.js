@@ -36,7 +36,7 @@ function SimpleBarChart(props) {
 
 function ExpenseChart(props) {
   return (
-    <div className='expenseChart'>
+    <div className='expense-chart'>
       <h3> ExpenseChart </h3>
       <SimpleBarChart expenses={props.expenses}/>
     </div>
